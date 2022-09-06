@@ -32,7 +32,7 @@
     }
 
     .blu-button{
-        background-color: #6699cc;
+        background-color: #5765f2;
         color: white;
     }
 
@@ -55,7 +55,7 @@
         margin-top: 1em;
     }
         /* logo */
-            #logo img{
+            .logo img{
                 width: 100%;
             }
             
@@ -151,6 +151,7 @@
 
 
 /* MAIN */
+
     main section{
         display: flex;
         flex-direction: column;
@@ -167,12 +168,26 @@
         display: flex;
     }
     
-    section:nth-child(even){
+    .gray-bg{
         background-color: #f6f6f6;
         padding: 6em 1em;
-        
     }
     
+    /* WAVE */
+    .wave{
+        margin-bottom: -1em;
+    }
+
+    svg{
+        fill: #f6f6f6;
+    }
+
+    .wave-reverse{
+        transform: rotate(180deg);
+        margin-top: -1em;
+        transform: scaleY(-1);
+    }
+    /* /WAVE */
     
     /* IMG */
         .img-container{
@@ -239,6 +254,8 @@
             font-weight: 600;
             background-image: url(../img/stars.svg);
             background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: center;
             width: 65.5%;
             align-self: center;
         }
@@ -263,7 +280,6 @@
 
     footer{
         background-color: #333333;
-        height: 530px;
         display: flex;
         flex-direction: column;
         color: white;
@@ -281,27 +297,24 @@
             height: 450px;
         }
 
-        .main-footer .social-box{
-            width: calc(100% / 3);
-            height: 400px;
-            padding-right: 5em;
-            padding-left: 1em; 
-         }
-
+        
         .main-footer .col{
             width: calc(100% / 6);
         }
         
         /* larger cells footer */
-
-            .social-box{
+        
+            .main-footer .social-box{
+                width: calc(100% / 3);
                 margin-top: 4em;
+                padding-right: 5em;
+                padding-left: 1em; 
             }
-
+    
             .social-box h3{
                 margin-bottom: 0.5em;
                 font-size: 1.8em;
-                color: #265ee8;
+                color: #5765f2;
             }
         
             .social-box img{
@@ -323,6 +336,7 @@
             .col{
                 margin-top: 4em;
                 margin-bottom: 5em;
+                align-self: stretch;
             }
 
             .col ul{
@@ -334,38 +348,29 @@
             .col h4{
                 margin-bottom: 0.8em;
                 padding-left: 0.5em;
-                color: #265ee8;
+                color: #5765f2;
             }
 
         /* /4 small cells */
 
     /* /main footer */
-
-    footer hr{
-        border-color: white;
-        margin: 2em 0;
-    }
   
     /* end footer */
 
         .end-footer{
+            margin-top: 1.5em;
+            border-top: 2px solid #265ee8;
             width: 62%;
-            height: 50px;
-            margin-top: 30px;
-            /* DEBUG */
-            background-color: #66ffcc;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 3em;
+            padding-top: 1.5em;
         }
     
-        .logo-footer, .button-footer{
-            padding: 0.3em;
-            height: 2em;
-            
-            /* DEBUG */
-            border: 2px dashed black;
-            background-color: #ffcccc;
+        .end-footer .blu-button{
+            border-radius: 20px;
+            padding: 0.7em;
         }
 
     /* /end footer */
